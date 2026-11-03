@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/bg_hero_panel"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_progress"
+            android:textColor="@color/on_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="আপনার শেখার অগ্রগতি"
+            android:textColor="@color/gold_light"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/item_progress_stat" android:id="@+id/stat_grammar" />
+    <include layout="@layout/item_progress_stat" android:id="@+id/stat_literature" />
+    <include layout="@layout/item_progress_stat" android:id="@+id/stat_questions" />
+    <include layout="@layout/item_progress_stat" android:id="@+id/stat_correct" />
+
+</LinearLayout>

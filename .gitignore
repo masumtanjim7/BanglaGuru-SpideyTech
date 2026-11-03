@@ -1,0 +1,41 @@
+# IDE and machine-specific files
+*.iml
+.idea/
+.gradle/
+/local.properties
+**/local.properties
+.DS_Store
+Thumbs.db
+
+# Android build outputs and caches
+**/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+out/
+/app/release/
+
+# Local environment and sensitive configuration
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+key.properties
+keystore.properties
+signing.properties
+**/google-services.json
+
+# Local logs
+*.log
+build_log.txt

@@ -1,0 +1,49 @@
+erDiagram
+    LESSONS {
+        TEXT id PK "Required, unique lesson identifier"
+        TEXT category "grammar or literature"
+        INTEGER order "Display sort order"
+        TEXT title "Lesson heading"
+        TEXT definition "Definition or author intro"
+        TEXT explanation "Detailed explanation or biography"
+        TEXT rules "Rules or literary works"
+        TEXT examples "Examples or notable works"
+        TEXT importantNotes "Study notes"
+        TEXT examFacts "Exam-oriented facts"
+        TEXT type "Optional, e.g. writer"
+        TEXT imageName "Optional drawable name"
+    }
+
+    MCQS {
+        TEXT id PK "Required, unique question identifier"
+        TEXT category "grammar or literature"
+        TEXT lessonId "Optional logical reference to lessons.id"
+        TEXT question "Question text"
+        TEXT optionA "Choice A"
+        TEXT optionB "Choice B"
+        TEXT optionC "Choice C"
+        TEXT optionD "Choice D"
+        TEXT correctAnswer "A, B, C or D"
+        TEXT explanation "Answer explanation"
+    }
+
+    FAVORITES {
+        TEXT itemId PK "Part of composite primary key"
+        TEXT itemType PK "Part of composite primary key"
+        INTEGER addedAt "Timestamp in Unix milliseconds"
+    }
+
+    PROGRESS {
+        INTEGER id PK "Auto-generated primary key"
+        TEXT category "grammar, literature, mcq, mock_test, daily_quiz"
+        TEXT refId "Optional lesson or session reference"
+        BOOLEAN completed "Completed flag"
+        INTEGER totalQuestions "Questions included in session"
+        INTEGER correctAnswers "Correct answers"
+        INTEGER timestamp "Timestamp in Unix milliseconds"
+    }
+
+    LESSONS |o--o{ MCQS : "lessonId (logical link)"
+    LESSONS |o--o| FAVORITES : "itemId when itemType is lesson"
+    MCQS |o--o| FAVORITES : "itemId when itemType is mcq"
+    LESSONS |o--o{ PROGRESS : "refId for lesson completions"

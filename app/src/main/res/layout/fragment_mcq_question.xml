@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        tools:text="প্রশ্ন ১ / ১০" />
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/on_surface"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="প্রশ্ন এখানে থাকবে?" />
+
+    <RadioGroup
+        android:id="@+id/rg_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/rb_a" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/bg_radio_option" android:buttonTint="@color/selector_gold_selected" android:padding="12dp" android:textColor="@color/on_surface" android:textSize="15sp" tools:text="A. Option" />
+        <RadioButton android:id="@+id/rb_b" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/bg_radio_option" android:buttonTint="@color/selector_gold_selected" android:padding="12dp" android:textColor="@color/on_surface" android:textSize="15sp" tools:text="B. Option" />
+        <RadioButton android:id="@+id/rb_c" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/bg_radio_option" android:buttonTint="@color/selector_gold_selected" android:padding="12dp" android:textColor="@color/on_surface" android:textSize="15sp" tools:text="C. Option" />
+        <RadioButton android:id="@+id/rb_d" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:background="@drawable/bg_radio_option" android:buttonTint="@color/selector_gold_selected" android:padding="12dp" android:textColor="@color/on_surface" android:textSize="15sp" tools:text="D. Option" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeColor="@color/gold"
+            android:textColor="@color/gold"
+            android:text="@string/btn_previous" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/gold"
+        android:textColor="@color/on_gold"
+            android:text="@string/btn_next" />
+    </LinearLayout>
+
+</LinearLayout>

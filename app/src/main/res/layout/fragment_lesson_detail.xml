@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/on_surface"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="বাংলা ভাষার উৎপত্তি ও পরিচয়" />
+
+            <ImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_star_outline" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_writer_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="60dp"
+            app:cardElevation="2dp"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_writer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/surface"
+                android:contentDescription="@string/label_writer_bio"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_writer_placeholder" />
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_definition" />
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_explanation" />
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_rules" />
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_examples" />
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_notes" />
+        <include layout="@layout/view_lesson_block" android:id="@+id/block_exam_facts" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mark_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/gold"
+        android:textColor="@color/on_gold"
+            android:text="@string/btn_mark_complete" />
+
+        <TextView
+            android:id="@+id/tv_mcq_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/label_lesson_mcq"
+            android:textColor="@color/on_surface"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_lesson_mcqs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment" android:icon="@drawable/ic_home" android:title="@string/nav_home" />
+    <item android:id="@+id/grammarTab" android:icon="@drawable/ic_grammar" android:title="@string/nav_grammar" />
+    <item android:id="@+id/literatureTab" android:icon="@drawable/ic_literature" android:title="@string/nav_literature" />
+    <item android:id="@+id/mcqSetupFragment" android:icon="@drawable/ic_mcq" android:title="@string/nav_mcq" />
+    <item android:id="@+id/moreFragment" android:icon="@drawable/ic_more" android:title="@string/nav_more" />
+</menu>

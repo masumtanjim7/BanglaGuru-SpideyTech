@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.banglaguru.app.ui.home.HomeFragment"
+        android:label="Home">
+        <action android:id="@+id/action_home_to_lessonList" app:destination="@id/lessonListFragment" />
+        <action android:id="@+id/action_home_to_mcqSetup" app:destination="@id/mcqSetupFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lessonListFragment"
+        android:name="com.banglaguru.app.ui.lesson.LessonListFragment"
+        android:label="Lessons">
+        <argument android:name="category" app:argType="string" />
+        <action android:id="@+id/action_lessonList_to_lessonDetail" app:destination="@id/lessonDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lessonDetailFragment"
+        android:name="com.banglaguru.app.ui.lesson.LessonDetailFragment"
+        android:label="Lesson">
+        <argument android:name="lessonId" app:argType="string" />
+        <argument android:name="category" app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mcqSetupFragment"
+        android:name="com.banglaguru.app.ui.mcq.McqSetupFragment"
+        android:label="MCQ Practice">
+        <action android:id="@+id/action_mcqSetup_to_mcqQuestion" app:destination="@id/mcqQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mcqQuestionFragment"
+        android:name="com.banglaguru.app.ui.mcq.McqQuestionFragment"
+        android:label="Practice">
+        <argument android:name="sessionType" app:argType="string" />
+        <argument android:name="topic" app:argType="string" android:defaultValue="random" />
+        <argument android:name="count" app:argType="integer" android:defaultValue="10" />
+        <action android:id="@+id/action_mcqQuestion_to_mcqResult" app:destination="@id/mcqResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mcqResultFragment"
+        android:name="com.banglaguru.app.ui.mcq.McqResultFragment"
+        android:label="Result" />
+
+    <fragment
+        android:id="@+id/mockTestFragment"
+        android:name="com.banglaguru.app.ui.mocktest.MockTestFragment"
+        android:label="Mock Test">
+        <action android:id="@+id/action_mockTest_to_mcqQuestion" app:destination="@id/mcqQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dailyQuizFragment"
+        android:name="com.banglaguru.app.ui.dailyquiz.DailyQuizFragment"
+        android:label="Daily Quiz">
+        <action android:id="@+id/action_dailyQuiz_to_mcqQuestion" app:destination="@id/mcqQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.banglaguru.app.ui.favorite.FavoriteFragment"
+        android:label="Favorite">
+        <action android:id="@+id/action_favorite_to_lessonDetail" app:destination="@id/lessonDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.banglaguru.app.ui.progress.ProgressFragment"
+        android:label="Progress" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.banglaguru.app.ui.settings.SettingsFragment"
+        android:label="Settings" />
+
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.banglaguru.app.ui.MoreFragment"
+        android:label="More">
+        <action android:id="@+id/action_more_to_mockTest" app:destination="@id/mockTestFragment" />
+        <action android:id="@+id/action_more_to_dailyQuiz" app:destination="@id/dailyQuizFragment" />
+        <action android:id="@+id/action_more_to_favorite" app:destination="@id/favoriteFragment" />
+        <action android:id="@+id/action_more_to_progress" app:destination="@id/progressFragment" />
+        <action android:id="@+id/action_more_to_settings" app:destination="@id/settingsFragment" />
+    </fragment>
+
+</navigation>

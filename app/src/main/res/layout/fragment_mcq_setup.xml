@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/section_mcq_practice"
+            android:textColor="@color/on_surface"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"
+            android:text="Topic"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/rb_topic_grammar" android:text="@string/topic_grammar" android:checked="true" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/rb_topic_literature" android:text="@string/topic_literature" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/rb_topic_mixed" android:text="@string/topic_mixed" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"
+            android:text="Mode"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton android:id="@+id/rb_mode_easy" android:text="@string/mode_easy" android:checked="true" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/rb_mode_medium" android:text="@string/mode_medium" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/rb_mode_hard" android:text="@string/mode_hard" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <RadioButton android:id="@+id/rb_mode_random" android:text="@string/mode_random" android:buttonTint="@color/selector_gold_selected" android:textColor="@color/on_surface" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_practice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/gold"
+        android:textColor="@color/on_gold"
+            android:text="@string/btn_start_practice" />
+
+    </LinearLayout>
+</ScrollView>
