@@ -1,4 +1,4 @@
-# BanglaGuru (বাংলাগুরু)
+# BanglaGuru
 
 **An offline-first Bengali grammar, literature, and multiple-choice exam preparation app for Android.**
 
@@ -21,7 +21,6 @@ BanglaGuru helps Bengali-speaking learners revise essential grammar rules, explo
 - [Offline content and seeding](#offline-content-and-seeding)
 - [Build and release](#build-and-release)
 - [Known limitations](#known-limitations)
-- [Repository information](#repository-information)
 
 ## Project overview
 
@@ -320,19 +319,3 @@ This section describes the code as provided, not speculative future functionalit
 - The Room database uses destructive fallback for schema version changes without migrations.
 - The Settings screen's bundled localized version label is still `1.0` although `app/build.gradle` defines version `2.0`; update this string before the next app build.
 - There is no authentication, backend, cross-device synchronization, or online content-update service in this source version.
-
-## Repository information
-
-**Suggested GitHub repository description:**
-
-> BanglaGuru is an offline Bengali grammar and literature learning app for Android, featuring lessons, MCQ practice, mock tests, favorites, progress tracking, and a local Room database.
-
-**Suggested GitHub topics:**
-
-`android` `android-app` `java` `bengali` `bangla` `education` `exam-preparation` `bengali-grammar` `bengali-literature` `mcq` `android-jetpack` `room-database` `mvvm` `offline-first`
-
-**Licensing:** No open-source license is included in this snapshot. If the owner intends to allow reuse or redistribution, add an appropriate license explicitly. Publishing a public repository does not automatically grant an open-source license.
-
----
-
-Built for accessible, offline Bengali study and examination preparation.
